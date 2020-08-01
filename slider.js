@@ -44,5 +44,5 @@ function showSlide(index) {
   });
 
   slides[slideIndex].style.display = "block";
-  dots[slideIndex].style.backgroundColor = "lightgreen";
+  dots[slideIndex].style.backgroundColor = "lightgray";
 }
