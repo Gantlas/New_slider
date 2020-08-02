@@ -1,6 +1,6 @@
 const showSlide = (index) => {
-  const slides = document.querySelectorAll(".item");
-  const dots = document.querySelectorAll(".dots-item");
+  const slides = [...document.querySelectorAll(".item")];
+  const dots = [...document.querySelectorAll(".dots-item")];
 
   switch (index) {
     case slides.length:
@@ -11,7 +11,7 @@ const showSlide = (index) => {
       break;
   }
 
-  slides.forEach((slide, i) => {
+  slides.map((slide, i) => {
     if (i === slideIndex) {
       slide.style.display = "block";
     } else {
@@ -19,7 +19,7 @@ const showSlide = (index) => {
     }
   });
 
-  dots.forEach((dot, i) => {
+  dots.map((dot, i) => {
     if (i === slideIndex) {
       dot.style.backgroundColor = "lightgray";
     } else {
@@ -52,3 +52,30 @@ dots.forEach((dot, i) => {
     showSlide(i);
   };
 });
+
+//=======================================================================>
+// const slides = document.querySelectorAll(".item");
+// console.log(slides);
+
+// const newSlides = [...document.querySelectorAll(".item")];
+// console.log(newSlides);
+
+// newSlides.map((slide) => {
+//   slide.className += " map";
+// });
+
+// console.log(newSlides);
+// console.log(a);
+
+//=======================================================================>
+// const arr = [1, 2, 3, 4, 5];
+
+// const newArr = [...[1, 2, 3, 4, 5]];
+// console.log(newArr);
+
+// newArr.map((item) => {
+//   item = "a";
+// });
+
+// // console.log(a);
+// console.log(newArr);
